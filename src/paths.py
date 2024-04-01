@@ -5,3 +5,5 @@ client_csv_path = os.path.join(parent_dir,'data', csv_filename)
 db_filename = 'data.db'
 db_path = os.path.join(parent_dir, 'data', db_filename)
 
+age_pipeline_file = 'age_pipeline.pkl'
+db_path = os.path.join(parent_dir, 'pipelines', age_pipeline_file)
