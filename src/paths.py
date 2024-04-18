@@ -9,3 +9,6 @@ db_path = os.path.join(parent_dir, 'data', db_filename)
 
 age_pipeline_file = 'age_pipeline.pkl'
 age_pipeline_path = os.path.join(parent_dir, 'pipelines', age_pipeline_file)
+
+final_pipeline_file = 'pipeline_simplified.pkl'
+final_pipeline_path = os.path.join(parent_dir, 'pipelines', final_pipeline_file)
