@@ -5,6 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder, OneHotEncoder
 from sklearn.ensemble import GradientBoostingRegressor
 
+# Main pipeline
 def main_pipeline(num_features, labeled_features, RFC_params):
    # Create transformers for the numerical and categorical features
     numeric_transformer = Pipeline(steps=[
@@ -28,7 +29,7 @@ def main_pipeline(num_features, labeled_features, RFC_params):
         ('classifier', RandomForestClassifier(**RFC_params))])
     return pipeline
 
-
+# Pipeline for age
 def age_pipeline(num_features, labeled_features, cat_features, GBR_params):
     numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='median')),
@@ -55,3 +56,4 @@ def age_pipeline(num_features, labeled_features, cat_features, GBR_params):
     pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
         ('classifier', GradientBoostingRegressor(**GBR_params))])
+    return pipeline
