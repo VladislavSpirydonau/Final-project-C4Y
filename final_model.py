@@ -23,7 +23,7 @@ predicted_ages = age_pipeline.predict(df[missing_age_indices])
 df.loc[missing_age_indices, 'age'] = predicted_ages
 
 # 4. Creating new feature 
-query1 = (sql_querys.query_square_sum)
+query1 = (sql_querys.query_square_sum_train)
 df = square_sum.square_sum(df,query1,conn)
 
 # 5. Creating training data
