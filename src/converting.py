@@ -1,6 +1,6 @@
 import pandas as pd
 
-def converter(df, rate):
+def converter(df, rate={'CZK': 1, 'USD': 23, 'EUR': 25}):
    
     # Select columns with balance parameters
     balance_cols = [col for col in df.columns if 'balance' in col]

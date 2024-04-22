@@ -62,6 +62,7 @@ on inv_campaign_eval.client_id = max_deposite.client_id''')
 
 query_square_sum_ev = ('''
 Select
+    balances.date, 
     balances.client_id,
     balances.balance,
     balances.currency
