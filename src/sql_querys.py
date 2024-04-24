@@ -26,7 +26,6 @@ on client.client_id = client_products.client_id
 left join mean_deposite
 on client.client_id = mean_deposite.client_id''')
 
-
 query_training_model = ('''
 WITH max_deposite as (
     select 
@@ -58,8 +57,6 @@ on inv_campaign_eval.client_id = client_products.client_id
 left join max_deposite
 on inv_campaign_eval.client_id = max_deposite.client_id''')
 
-
-
 query_square_sum_ev = ('''
 Select
     balances.date, 
@@ -86,7 +83,6 @@ Select *
 from inv_campaign_eval
 left join balances
 on inv_campaign_eval.client_id = balances.client_id''')
-
 
 query_evaluation = ('''WITH mean_deposite AS (
     SELECT 

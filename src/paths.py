@@ -1,4 +1,5 @@
 import os
+
 parent_dir = os.path.dirname(os.path.dirname(__file__))
 
 csv_filename = "client_ids.csv"

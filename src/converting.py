@@ -1,5 +1,5 @@
 import pandas as pd
-
+# function for converting currency rates in data frame
 def converter(df, rate={'CZK': 1, 'USD': 23, 'EUR': 25}):
    
     # Select columns with balance parameters
